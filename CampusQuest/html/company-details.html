@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusX - Company Details</title>
+
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2 class="logo">CampusX</h2>
+
+        <nav>
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="academics.html">📚 Academics</a>
+            <a href="events.html">🎯 Events</a>
+            <a href="companies.html" class="active">🏢 Companies</a>
+            <a href="lost-found.html">🔎 Lost & Found</a>
+            <a href="quests.html">🎮 Quests</a>
+            <a href="leaderboard.html">🏆 Leaderboard</a>
+            <a href="profile.html">👤 Profile</a>
+            <a href="settings.html">⚙️ Settings</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <div class="top-bar">
+
+            <div>
+                <h1>Company Details 🏢</h1>
+                <p>Everything you need to know about this opportunity</p>
+            </div>
+
+        </div>
+
+
+        <!-- COMPANY DETAILS -->
+        <section class="campus-feed">
+
+            <div class="feed-title">
+                <h2 id="companyTitle">💻 TechNova Solutions</h2>
+                <p id="companySubtitle">
+                    Upcoming campus placement opportunity
+                </p>
+            </div>
+
+
+            <!-- MAIN COMPANY CARD -->
+            <div class="feed-card company-details-card">
+
+                <span class="feed-icon" id="companyIcon">💻</span>
+
+                <div class="company-info">
+
+                    <h3 id="companyName">TechNova Solutions</h3>
+
+                    <p class="company-status" id="companyStatus">
+                        🟢 Registration Open
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DETAILS -->
+            <div class="feed-grid">
+
+
+                <!-- DATE -->
+                <div class="feed-card">
+
+                    <span class="feed-icon">📅</span>
+
+                    <div>
+                        <h3>Visit Date</h3>
+                        <p id="companyDate">18 September 2026</p>
+                    </div>
+
+                </div>
+
+
+                <!-- OPPORTUNITY -->
+                <div class="feed-card">
+
+                    <span class="feed-icon">💼</span>
+
+                    <div>
+                        <h3>Opportunity</h3>
+                        <p id="companyType">Placement Drive</p>
+                    </div>
+
+                </div>
+
+
+                <!-- BRANCH -->
+                <div class="feed-card">
+
+                    <span class="feed-icon">🎓</span>
+
+                    <div>
+                        <h3>Eligible Branches</h3>
+                        <p id="companyBranch">CSE, IT, AI & DS</p>
+                    </div>
+
+                </div>
+
+
+                <!-- VENUE -->
+                <div class="feed-card">
+
+                    <span class="feed-icon">📍</span>
+
+                    <div>
+                        <h3>Venue</h3>
+                        <p id="companyVenue">Main Auditorium</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ELIGIBILITY -->
+            <div class="feed-card company-extra">
+
+                <span class="feed-icon">📋</span>
+
+                <div>
+                    <h3>Eligibility</h3>
+
+                    <p id="companyEligibility">
+                        • Open to eligible students from CSE, IT and AI & DS<br>
+                        • Students should meet the academic requirements<br>
+                        • Carry your college ID card during the drive
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- REGISTRATION -->
+            <div class="company-register">
+
+                <h2>🚀 Interested in this opportunity?</h2>
+
+                <p id="registrationText">
+                    Register before the campus deadline to participate
+                    in the placement drive.
+                </p>
+
+                <button onclick="openRegistration()">
+                    Register Now →
+                </button>
+
+            </div>
+
+
+            <!-- BACK BUTTON -->
+            <div class="company-back">
+
+                <a href="companies.html">
+                    ← Back to Companies
+                </a>
+
+            </div>
+
+
+            <!-- REGISTRATION FORM -->
+            <div id="registrationBox" class="registration-box">
+
+                <h2>📝 Register for this Opportunity</h2>
+
+                <p>Enter your details to register.</p>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter your name"
+                >
+
+                <input
+                    type="text"
+                    id="studentRoll"
+                    placeholder="Enter your roll number"
+                >
+
+                <input
+                    type="email"
+                    id="studentEmail"
+                    placeholder="Enter your college email"
+                >
+
+                <button onclick="submitRegistration()">
+                    Submit Registration →
+                </button>
+
+                <button
+                    class="cancel-btn"
+                    onclick="closeRegistration()">
+                    Cancel
+                </button>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/company-details.js"></script>
+
+    <script>
+
+        function openRegistration() {
+
+            document.getElementById("registrationBox").style.display = "block";
+
+        }
+
+
+        function closeRegistration() {
+
+            document.getElementById("registrationBox").style.display = "none";
+
+        }
+
+
+        function submitRegistration() {
+
+            let name = document.getElementById("studentName").value;
+            let roll = document.getElementById("studentRoll").value;
+            let email = document.getElementById("studentEmail").value;
+
+
+            if (name === "" || roll === "" || email === "") {
+
+                alert("Please fill all the details.");
+
+                return;
+
+            }
+
+
+            alert("Registration Successful! 🎉");
+
+            document.getElementById("registrationBox").style.display = "none";
+
+        }
+
+    </script>
+
+</body>
+</html>

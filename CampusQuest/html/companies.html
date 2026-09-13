@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusX - Companies</title>
+
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2 class="logo">CampusX</h2>
+
+        <nav>
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="academics.html">📚 Academics</a>
+            <a href="events.html">🎯 Events</a>
+            <a href="companies.html" class="active">🏢 Companies</a>
+            <a href="lost-found.html">🔎 Lost & Found</a>
+            <a href="quests.html">🎮 Quests</a>
+            <a href="leaderboard.html">🏆 Leaderboard</a>
+            <a href="profile.html">👤 Profile</a>
+            <a href="settings.html">⚙️ Settings</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <div class="top-bar">
+
+            <div>
+                <h1>Companies on Campus 🏢</h1>
+                <p>Placement drives, internships and company sessions</p>
+            </div>
+
+        </div>
+
+
+        <!-- PAGE INTRO -->
+        <section class="campus-feed">
+
+            <div class="feed-title">
+                <h2>🚀 Upcoming Opportunities</h2>
+                <p>Keep track of companies visiting your campus</p>
+            </div>
+
+
+            <!-- SEARCH AND FILTERS -->
+            <div class="company-filters">
+
+                <input
+                    type="text"
+                    id="companySearch"
+                    placeholder="🔎 Search company..."
+                >
+
+                <select id="branchFilter">
+                    <option value="all">All Branches</option>
+                    <option value="cse">CSE</option>
+                    <option value="it">IT</option>
+                    <option value="ai">AI & DS</option>
+                    <option value="ece">ECE</option>
+                </select>
+
+                <select id="typeFilter">
+                    <option value="all">All Opportunities</option>
+                    <option value="placement">Placement</option>
+                    <option value="internship">Internship</option>
+                </select>
+
+            </div>
+
+
+            <!-- COMPANY CARDS -->
+            <div class="feed-grid">
+
+
+                <!-- COMPANY 1 -->
+                <div class="feed-card company-card"
+                     data-company="technova"
+                     data-branch="cse it ai"
+                     data-type="placement">
+
+                    <span class="feed-icon">💻</span>
+
+                    <div>
+                        <h3>TechNova Solutions</h3>
+
+                        <p>
+                            📅 18 September 2026<br>
+                            💼 Placement Drive<br>
+                            🎓 CSE, IT, AI & DS<br>
+                            📍 Main Auditorium
+                        </p>
+                    </div>
+
+                    <a href="company-details.html" class="view-company">View →</a>
+                </div>
+
+
+                <!-- COMPANY 2 -->
+                <div class="feed-card company-card"
+                     data-company="codesphere"
+                     data-branch="cse it ece"
+                     data-type="internship placement">
+
+                    <span class="feed-icon">🚀</span>
+
+                    <div>
+                        <h3>CodeSphere Technologies</h3>
+
+                        <p>
+                            📅 24 September 2026<br>
+                            💼 Internship + Placement<br>
+                            🎓 CSE, IT & ECE<br>
+                            📍 Seminar Hall
+                        </p>
+                    </div>
+
+                    <a href="company-details.html" class="view-company">View →</a>
+
+                </div>
+
+
+                <!-- COMPANY 3 -->
+                <div class="feed-card company-card"
+                     data-company="innovateai"
+                     data-branch="ai ds cse"
+                     data-type="internship">
+
+                    <span class="feed-icon">🤖</span>
+
+                    <div>
+                        <h3>InnovateAI</h3>
+
+                        <p>
+                            📅 30 September 2026<br>
+                            💼 Internship Drive<br>
+                            🎓 AI, DS & CSE<br>
+                            📍 Block A
+                        </p>
+                    </div>
+
+                    <a href="company-details.html" class="view-company">View →</a>
+
+                </div>
+
+
+                <!-- COMPANY 4 -->
+                <div class="feed-card company-card"
+                     data-company="webcore"
+                     data-branch="cse it ece"
+                     data-type="placement">
+
+                    <span class="feed-icon">🌐</span>
+
+                    <div>
+                        <h3>WebCore Labs</h3>
+
+                        <p>
+                            📅 5 October 2026<br>
+                            💼 Placement Drive<br>
+                            🎓 CSE, IT & ECE<br>
+                            📍 Placement Cell
+                        </p>
+                    </div>
+
+                   <a href="company-details.html" class="view-company">View →</a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/companies.js"></script>
+
+</body>
+</html>

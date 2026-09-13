@@ -1,0 +1,677 @@
+/* =====================================
+   GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(0, 217, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(130, 60, 255, 0.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(255, 40, 180, 0.14),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #050816,
+            #0a1230,
+            #120a2c,
+            #050816
+        );
+
+    background-size:
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        400% 400%;
+
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =====================================
+   MAIN CONTAINER
+===================================== */
+
+.quests-container {
+
+    width: 100%;
+
+    max-width: 950px;
+
+    margin: auto;
+
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.quests-header {
+
+    margin-bottom: 30px;
+
+}
+
+
+.back-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #b9b4ff;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    margin-bottom: 25px;
+
+}
+
+
+.back-button:hover {
+
+    color: white;
+
+}
+
+
+.title-section {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.quest-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 32px;
+
+    background: rgba(125, 92, 255, 0.2);
+
+    border: 1px solid rgba(145, 120, 255, 0.4);
+
+}
+
+
+.title-section h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.title-section p {
+
+    color: #aaa6c5;
+
+}
+
+
+/* =====================================
+   PLAYER CARD
+===================================== */
+
+.player-card {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 22px;
+
+    margin-bottom: 25px;
+
+    border-radius: 20px;
+
+    background: rgba(25, 22, 50, 0.9);
+
+    border: 1px solid rgba(150, 135, 255, 0.2);
+
+}
+
+
+.player-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.player-avatar {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+    background: rgba(124, 92, 255, 0.2);
+
+}
+
+
+.player-info h2 {
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.player-info p {
+
+    color: #aaa6c5;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================
+   XP
+===================================== */
+
+.xp-section {
+
+    width: 300px;
+
+}
+
+
+.xp-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    color: #aaa6c5;
+
+}
+
+
+.xp-top strong {
+
+    color: white;
+
+}
+
+
+.xp-bar {
+
+    height: 10px;
+
+    background: #302c4c;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.xp-progress {
+
+    height: 100%;
+
+    width: 0%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7c5cff,
+            #b08cff
+        );
+
+    border-radius: 20px;
+
+    transition: width 0.5s;
+
+}
+
+
+/* =====================================
+   FILTERS
+===================================== */
+
+.filter-section {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.filter-button {
+
+    padding: 10px 17px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(150, 135, 255, 0.25);
+
+    background: rgba(25, 22, 50, 0.8);
+
+    color: #aaa6c5;
+
+    cursor: pointer;
+
+}
+
+
+.filter-button:hover {
+
+    color: white;
+
+}
+
+
+.filter-button.active {
+
+    background: #7c5cff;
+
+    color: white;
+
+    border-color: #7c5cff;
+
+}
+
+
+/* =====================================
+   QUEST LIST
+===================================== */
+
+.quest-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* =====================================
+   QUEST CARD
+===================================== */
+
+.quest-card {
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background: rgba(25, 22, 50, 0.9);
+
+    border: 1px solid rgba(150, 135, 255, 0.2);
+
+    transition: 0.2s;
+
+}
+
+
+.quest-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(150, 135, 255, 0.5);
+
+}
+
+
+.quest-card.completed {
+
+    opacity: 0.7;
+
+}
+
+
+.quest-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.quest-emoji {
+
+    font-size: 32px;
+
+}
+
+
+.quest-category {
+
+    font-size: 11px;
+
+    padding: 5px 9px;
+
+    border-radius: 10px;
+
+    background: rgba(124, 92, 255, 0.15);
+
+    color: #b9aaff;
+
+    text-transform: uppercase;
+
+}
+
+
+.quest-card h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.quest-description {
+
+    color: #aaa6c5;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =====================================
+   QUEST REWARD
+===================================== */
+
+.quest-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.quest-reward {
+
+    color: #ffd76a;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+}
+
+
+.complete-button {
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    background: #7c5cff;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.complete-button:hover {
+
+    background: #9278ff;
+
+}
+
+
+.complete-button:disabled {
+
+    background: #403b5d;
+
+    color: #aaa6c5;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =====================================
+   MESSAGE
+===================================== */
+
+.quest-message {
+
+    text-align: center;
+
+    min-height: 25px;
+
+    margin: 25px 0;
+
+    color: #00e0a0;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================
+   BOTTOM BUTTONS
+===================================== */
+
+.bottom-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+}
+
+
+.secondary-button {
+
+    flex: 1;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(150, 135, 255, 0.25);
+
+    background: rgba(25, 22, 50, 0.8);
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+.secondary-button:hover {
+
+    background: rgba(124, 92, 255, 0.2);
+
+}
+
+
+/* =====================================
+   LIGHT MODE
+===================================== */
+
+body.light-mode {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f1ff,
+            #e8e4ff
+        );
+
+    color: #24213d;
+
+}
+
+
+body.light-mode .player-card,
+body.light-mode .quest-card,
+body.light-mode .filter-button,
+body.light-mode .secondary-button {
+
+    background: white;
+
+    border-color: #ddd8f5;
+
+}
+
+
+body.light-mode .player-info p,
+body.light-mode .title-section p,
+body.light-mode .quest-description,
+body.light-mode .xp-top {
+
+    color: #716d86;
+
+}
+
+
+body.light-mode .xp-top strong {
+
+    color: #24213d;
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+    body {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .title-section h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .player-card {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .xp-section {
+
+        width: 100%;
+
+    }
+
+
+    .quest-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .bottom-buttons {
+
+        flex-direction: column;
+
+    }
+
+}

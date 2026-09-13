@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusQuest | Register</title>
+
+    <link rel="stylesheet" href="../CSS/register.css">
+
+</head>
+
+<body>
+
+
+    <!-- GAMING BACKGROUND -->
+
+    <div class="background">
+
+        <div class="stars"></div>
+
+        <div class="orb orb-one"></div>
+
+        <div class="orb orb-two"></div>
+
+        <div class="orb orb-three"></div>
+
+        <div class="floating-game game-one">⚡</div>
+
+        <div class="floating-game game-two">🎮</div>
+
+        <div class="floating-game game-three">🏆</div>
+
+        <div class="floating-game game-four">⭐</div>
+
+        <div class="floating-game game-five">👾</div>
+
+        <div class="floating-game game-six">🚀</div>
+
+    </div>
+
+
+
+    <!-- REGISTRATION CONTAINER -->
+
+    <div class="register-container">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <span>⚡</span>
+
+            <h1>CampusQuest</h1>
+
+        </div>
+
+
+        <p class="tagline">
+            CREATE YOUR QUEST
+        </p>
+
+
+
+        <!-- REGISTER BOX -->
+
+        <div class="register-box">
+
+
+            <h2>
+                Join the Quest 🎮
+            </h2>
+
+
+            <p class="register-text">
+                Create your player account and enter the campus.
+            </p>
+
+
+
+            <form id="registerForm">
+
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+                    <label for="name">
+                        Player Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                    >
+
+                    <small id="nameError"></small>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="email">
+                        College Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your college email"
+                    >
+
+                    <small id="emailError"></small>
+
+                </div>
+
+
+
+                <!-- COLLEGE DETAILS -->
+
+                <div class="row">
+
+
+                    <div class="input-group">
+
+                        <label for="branch">
+                            Branch
+                        </label>
+
+                        <select id="branch">
+
+                            <option value="">
+                                Select Branch
+                            </option>
+
+                            <option value="CSE">
+                                CSE
+                            </option>
+
+                            <option value="IT">
+                                IT
+                            </option>
+
+                            <option value="ECE">
+                                ECE
+                            </option>
+
+                            <option value="ME">
+                                Mechanical
+                            </option>
+
+                            <option value="CE">
+                                Civil
+                            </option>
+
+                        </select>
+
+                        <small id="branchError"></small>
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label for="year">
+                            Year
+                        </label>
+
+                        <select id="year">
+
+                            <option value="">
+                                Select Year
+                            </option>
+
+                            <option value="1">
+                                1st Year
+                            </option>
+
+                            <option value="2">
+                                2nd Year
+                            </option>
+
+                            <option value="3">
+                                3rd Year
+                            </option>
+
+                            <option value="4">
+                                4th Year
+                            </option>
+
+                        </select>
+
+                        <small id="yearError"></small>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- AVATAR -->
+
+                <div class="avatar-section">
+
+                    <label>
+                        Choose Your Avatar
+                    </label>
+
+
+                    <div class="avatars">
+
+
+                        <button type="button" class="avatar">
+                            🧑‍💻
+                        </button>
+
+                        <button type="button" class="avatar">
+                            👾
+                        </button>
+
+                        <button type="button" class="avatar">
+                            🤖
+                        </button>
+
+                        <button type="button" class="avatar">
+                            🦊
+                        </button>
+
+                        <button type="button" class="avatar">
+                            🎮
+                        </button>
+
+
+                    </div>
+
+
+                    <small id="avatarError"></small>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create your password"
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+
+                    <div class="strength">
+
+                        <div
+                            id="strengthBar"
+                            class="strength-bar"
+                        ></div>
+
+                    </div>
+
+
+                    <p id="strengthText">
+                        Password strength
+                    </p>
+
+
+                    <small id="passwordError"></small>
+
+                </div>
+
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Enter password again"
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleConfirm"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+
+                    <small id="confirmError"></small>
+
+                </div>
+
+
+
+                <!-- TERMS -->
+
+                <label class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                    >
+
+                    <span>
+                        I agree to the CampusQuest rules and
+                        community guidelines.
+                    </span>
+
+                </label>
+
+
+                <small id="termsError"></small>
+
+
+
+                <!-- REGISTER BUTTON -->
+
+                <button
+                    type="submit"
+                    class="register-button"
+                >
+                    CREATE MY QUEST ⚡
+                </button>
+
+
+                <p id="registerMessage"></p>
+
+
+            </form>
+
+
+
+            <!-- LOGIN -->
+
+            <div class="login-link">
+
+                <p>
+
+                    Already a player?
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="../JS/register.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,877 @@
+/* =====================================
+   RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+    background: #050816;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =====================================
+   BACKGROUND
+===================================== */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 217, 255, 0.25),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(130, 60, 255, 0.28),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(255, 40, 180, 0.18),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #050816,
+            #0a1230,
+            #120a2c,
+            #050816
+        );
+
+    background-size:
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        400% 400%;
+
+    animation: backgroundMove 15s ease infinite;
+
+}
+
+
+@keyframes backgroundMove {
+
+    0% {
+        background-position:
+            0% 0%,
+            100% 0%,
+            50% 100%,
+            0% 50%;
+    }
+
+    50% {
+        background-position:
+            40% 30%,
+            60% 50%,
+            30% 60%,
+            100% 50%;
+    }
+
+    100% {
+        background-position:
+            0% 0%,
+            100% 0%,
+            50% 100%,
+            0% 50%;
+    }
+
+}
+
+
+/* =====================================
+   STARS
+===================================== */
+
+.stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            white 1px,
+            transparent 1px
+        ),
+
+        radial-gradient(
+            circle,
+            #00d9ff 1px,
+            transparent 1px
+        );
+
+    background-size:
+        90px 90px,
+        130px 130px;
+
+    animation: starsMove 20s linear infinite;
+
+    opacity: 0.4;
+
+}
+
+
+@keyframes starsMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-90px);
+    }
+
+}
+
+
+/* =====================================
+   GLOWING ORBS
+===================================== */
+
+.orb {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(50px);
+
+    opacity: 0.4;
+
+    animation: orbFloat 8s ease-in-out infinite;
+
+}
+
+
+.orb-one {
+
+    width: 250px;
+
+    height: 250px;
+
+    background: #00d9ff;
+
+    top: -80px;
+
+    left: -80px;
+
+}
+
+
+.orb-two {
+
+    width: 300px;
+
+    height: 300px;
+
+    background: #8a35ff;
+
+    right: -100px;
+
+    top: 30%;
+
+    animation-delay: 2s;
+
+}
+
+
+.orb-three {
+
+    width: 220px;
+
+    height: 220px;
+
+    background: #ff2bb5;
+
+    bottom: -100px;
+
+    left: 40%;
+
+    animation-delay: 4s;
+
+}
+
+
+@keyframes orbFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(35px, -30px);
+    }
+
+}
+
+
+/* =====================================
+   FLOATING ICONS
+===================================== */
+
+.floating-game {
+
+    position: absolute;
+
+    font-size: 30px;
+
+    opacity: 0.3;
+
+    animation: gameFloat 6s ease-in-out infinite;
+
+}
+
+
+.game-one {
+    top: 12%;
+    left: 8%;
+}
+
+
+.game-two {
+    top: 20%;
+    right: 8%;
+    animation-delay: 1s;
+}
+
+
+.game-three {
+    bottom: 18%;
+    left: 8%;
+    animation-delay: 2s;
+}
+
+
+.game-four {
+    bottom: 12%;
+    right: 12%;
+    animation-delay: 3s;
+}
+
+
+.game-five {
+    top: 55%;
+    left: 4%;
+    animation-delay: 4s;
+}
+
+
+.game-six {
+    top: 8%;
+    right: 30%;
+    animation-delay: 2.5s;
+}
+
+
+@keyframes gameFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(10deg);
+    }
+
+}
+
+
+/* =====================================
+   CONTAINER
+===================================== */
+
+.register-container {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px 20px;
+
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.logo span {
+
+    font-size: 35px;
+
+}
+
+
+.logo h1 {
+
+    font-size: 35px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00d9ff,
+            #8c7bff
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+}
+
+
+.tagline {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #8f9bb8;
+
+    margin: 5px 0 22px;
+
+}
+
+
+/* =====================================
+   REGISTER BOX
+===================================== */
+
+.register-box {
+
+    width: 100%;
+
+    max-width: 480px;
+
+    padding: 32px;
+
+    background:
+        rgba(7, 13, 30, 0.9);
+
+    border:
+        1px solid
+        rgba(0, 217, 255, 0.35);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 40px
+        rgba(0, 217, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+}
+
+
+.register-box h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.register-text {
+
+    color: #8995b1;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =====================================
+   INPUTS
+===================================== */
+
+.input-group {
+
+    margin-bottom: 15px;
+
+}
+
+
+.input-group label,
+.avatar-section > label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #c9d2e8;
+
+    margin-bottom: 7px;
+
+}
+
+
+.input-group input,
+.input-group select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 9px;
+
+    border:
+        1px solid
+        #28334e;
+
+    background:
+        rgba(10, 16, 32, 0.9);
+
+    color: white;
+
+    outline: none;
+
+    font-size: 13px;
+
+}
+
+
+.input-group input:focus,
+.input-group select:focus {
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 217, 255, 0.2);
+
+}
+
+
+.input-group select option {
+
+    background: #0c1223;
+
+}
+
+
+.input-group small,
+#avatarError,
+#termsError {
+
+    display: block;
+
+    min-height: 15px;
+
+    margin-top: 4px;
+
+    color: #ff5c7a;
+
+    font-size: 11px;
+
+}
+
+
+/* =====================================
+   TWO COLUMNS
+===================================== */
+
+.row {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+
+.row .input-group {
+
+    width: 50%;
+
+}
+
+
+/* =====================================
+   AVATAR
+===================================== */
+
+.avatar-section {
+
+    margin: 5px 0 15px;
+
+}
+
+
+.avatars {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.avatar {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid
+        #28334e;
+
+    background:
+        rgba(10, 16, 32, 0.9);
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+}
+
+
+.avatar:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #00d9ff;
+
+}
+
+
+.avatar.selected {
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 217, 255, 0.5);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =====================================
+   PASSWORD
+===================================== */
+
+.password-box {
+
+    position: relative;
+
+}
+
+
+.password-box input {
+
+    padding-right: 45px;
+
+}
+
+
+.password-box button {
+
+    position: absolute;
+
+    right: 8px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================
+   PASSWORD STRENGTH
+===================================== */
+
+.strength {
+
+    width: 100%;
+
+    height: 5px;
+
+    margin-top: 7px;
+
+    background: #202a41;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.strength-bar {
+
+    height: 100%;
+
+    width: 0%;
+
+    transition: 0.3s;
+
+}
+
+
+#strengthText {
+
+    font-size: 10px;
+
+    color: #7f8ba6;
+
+    margin-top: 4px;
+
+}
+
+
+/* =====================================
+   TERMS
+===================================== */
+
+.terms {
+
+    display: flex;
+
+    gap: 8px;
+
+    align-items: flex-start;
+
+    font-size: 11px;
+
+    color: #8995b1;
+
+    cursor: pointer;
+
+    line-height: 1.4;
+
+}
+
+
+.terms input {
+
+    margin-top: 2px;
+
+    accent-color: #00d9ff;
+
+}
+
+
+/* =====================================
+   REGISTER BUTTON
+===================================== */
+
+.register-button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00bcd4,
+            #685cff,
+            #d83cff
+        );
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.register-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 217, 255, 0.3);
+
+}
+
+
+/* =====================================
+   MESSAGE
+===================================== */
+
+#registerMessage {
+
+    text-align: center;
+
+    margin-top: 12px;
+
+    font-size: 12px;
+
+}
+
+
+/* =====================================
+   LOGIN LINK
+===================================== */
+
+.login-link {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        #202a41;
+
+    color: #7f8ba6;
+
+    font-size: 12px;
+
+}
+
+
+.login-link a {
+
+    color: #00d9ff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+.login-link a:hover {
+
+    text-shadow:
+        0 0 10px
+        #00d9ff;
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 500px) {
+
+    .register-box {
+
+        padding: 25px 20px;
+
+    }
+
+
+    .logo h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .row {
+
+        gap: 10px;
+
+    }
+
+
+    .avatars {
+
+        justify-content: space-between;
+
+    }
+
+
+    .avatar {
+
+        width: 43px;
+
+        height: 43px;
+
+        font-size: 21px;
+
+    }
+
+}

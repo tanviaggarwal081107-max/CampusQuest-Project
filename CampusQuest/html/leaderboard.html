@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusQuest - Leaderboard</title>
+
+    <link rel="stylesheet"
+          href="../CSS/leaderboard.css">
+
+</head>
+
+
+<body>
+
+    <div class="leaderboard-container">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="leaderboard-header">
+
+            <div class="trophy">
+                🏆
+            </div>
+
+            <h1>
+                CampusQuest Leaderboard
+            </h1>
+
+            <p>
+                See who is leading the campus adventure!
+            </p>
+
+        </header>
+
+
+
+        <!-- ================= PODIUM ================= -->
+
+        <section
+            id="podiumSection"
+            class="podium-section">
+        </section>
+
+
+
+        <!-- ================= YOUR POSITION ================= -->
+
+        <section class="your-position">
+
+            <div class="section-title">
+
+                <h2>
+                    🎮 Your Position
+                </h2>
+
+                <span>
+                    Keep exploring!
+                </span>
+
+            </div>
+
+
+            <div class="your-player">
+
+
+                <div
+                    id="currentPlayerAvatar"
+                    class="your-avatar">
+
+                    🎮
+
+                </div>
+
+
+                <div class="your-player-info">
+
+                    <h3 id="currentPlayerName">
+                        Student
+                    </h3>
+
+                    <p>
+
+                        ⚡
+
+                        <span id="currentPlayerXP">
+                            0
+                        </span>
+
+                        XP
+
+                    </p>
+
+                </div>
+
+
+                <div class="your-rank">
+
+                    <span>
+                        YOUR RANK
+                    </span>
+
+                    <strong id="yourRank">
+                        #1
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="your-stats">
+
+
+                <div class="stat">
+
+                    <span>
+                        XP
+                    </span>
+
+                    <strong id="yourXP">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span>
+                        Quests Completed
+                    </span>
+
+                    <strong id="yourQuests">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ALL EXPLORERS ================= -->
+
+        <section class="all-explorers">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>
+                        🌟 All Explorers
+                    </h2>
+
+                    <p>
+                        Players ranked by XP
+                    </p>
+
+                </div>
+
+                <span>
+                    ⚡ XP Ranking
+                </span>
+
+            </div>
+
+
+            <div id="leaderboardList">
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= BUTTONS ================= -->
+
+        <div class="bottom-buttons">
+
+
+            <button
+                id="backButton"
+                class="action-button">
+
+                ← Profile
+
+            </button>
+
+
+            <button
+                id="questsButton"
+                class="action-button">
+
+                🎯 Quests
+
+            </button>
+
+
+            <button
+                id="settingsButton"
+                class="action-button">
+
+                ⚙️ Settings
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <script src="../JS/leaderboard.js"></script>
+
+</body>
+
+</html>

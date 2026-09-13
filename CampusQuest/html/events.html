@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusX - Events</title>
+
+    <link rel="stylesheet" href="../CSS/events.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2 class="logo">CampusX</h2>
+
+        <nav>
+
+            <a href="dashboard.html">🏠 Dashboard</a>
+
+            <a href="academics.html">📚 Academics</a>
+
+            <a href="timetable.html">📅 Timetable</a>
+
+            <a href="quests.html">🗺️ Quests</a>
+
+            <a href="events.html" class="active">🎯 Events</a>
+
+            <a href="companies.html">🏢 Companies</a>
+
+            <a href="lost-found.html">🔎 Lost & Found</a>
+
+            <a href="profile.html">👤 Profile</a>
+
+            <a href="settings.html">⚙️ Settings</a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="top-bar">
+
+            <div>
+
+                <h1>🎯 Campus Events</h1>
+
+                <p>
+                    Discover what's happening around your campus
+                </p>
+
+            </div>
+
+            <div class="student-info">
+
+                <span id="studentName">
+                    Student
+                </span>
+
+                <div class="profile-circle" id="profileCircle">
+                    S
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- INTRO -->
+
+        <section class="intro-card">
+
+            <div>
+
+                <span class="small-label">
+                    YOUR CAMPUS • YOUR OPPORTUNITIES
+                </span>
+
+                <h2>
+                    Don't miss what's happening 🚀
+                </h2>
+
+                <p>
+                    Explore hackathons, workshops, coding events,
+                    department activities and campus competitions.
+                </p>
+
+            </div>
+
+            <div class="branch-badge" id="studentBranch">
+                Branch
+            </div>
+
+        </section>
+
+
+        <!-- FILTERS -->
+
+        <section class="filter-section">
+
+            <button class="filter-button active"
+                data-filter="all">
+                🌟 All
+            </button>
+
+            <button class="filter-button"
+                data-filter="hackathon">
+                💻 Hackathons
+            </button>
+
+            <button class="filter-button"
+                data-filter="workshop">
+                🧠 Workshops
+            </button>
+
+            <button class="filter-button"
+                data-filter="coding">
+                👨‍💻 Coding
+            </button>
+
+            <button class="filter-button"
+                data-filter="department">
+                🎓 Department
+            </button>
+
+        </section>
+
+
+        <!-- UPCOMING EVENTS -->
+
+        <section class="events-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        🔥 Upcoming Events
+                    </h2>
+
+                    <p>
+                        Events you might want to attend
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="events-grid" id="eventsGrid">
+
+
+                <!-- EVENT 1 -->
+
+                <div class="event-card"
+                    data-category="hackathon">
+
+                    <div class="event-top">
+
+                        <span class="event-type">
+                            💻 HACKATHON
+                        </span>
+
+                        <span class="event-date">
+                            18 SEP
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Campus Innovation Hackathon
+                    </h3>
+
+                    <p>
+                        Build innovative solutions for real-world
+                        campus and community problems.
+                    </p>
+
+                    <div class="event-info">
+
+                        <span>📍 Innovation Hub</span>
+
+                        <span>⏰ 10:00 AM</span>
+
+                    </div>
+
+                    <button class="event-button" onclick="showEventDetails(4)">
+    View Details →
+</button>
+
+                </div>
+
+
+                <!-- EVENT 2 -->
+
+                <div class="event-card"
+                    data-category="workshop">
+
+                    <div class="event-top">
+
+                        <span class="event-type">
+                            🧠 WORKSHOP
+                        </span>
+
+                        <span class="event-date">
+                            20 SEP
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        AI & Machine Learning Workshop
+                    </h3>
+
+                    <p>
+                        Learn the fundamentals of AI and explore
+                        practical machine learning applications.
+                    </p>
+
+                    <div class="event-info">
+
+                        <span>📍 Seminar Hall</span>
+
+                        <span>⏰ 11:00 AM</span>
+
+                    </div>
+
+                    <button class="event-button" onclick="showEventDetails(4)">
+    View Details →
+</button>
+
+                </div>
+
+
+                <!-- EVENT 3 -->
+
+                <div class="event-card"
+                    data-category="coding">
+
+                    <div class="event-top">
+
+                        <span class="event-type">
+                            👨‍💻 CODING
+                        </span>
+
+                        <span class="event-date">
+                            22 SEP
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        CodeSprint Challenge
+                    </h3>
+
+                    <p>
+                        Test your programming skills with
+                        algorithmic problems and coding challenges.
+                    </p>
+
+                    <div class="event-info">
+
+                        <span>📍 Computer Lab 3</span>
+
+                        <span>⏰ 02:00 PM</span>
+
+                    </div>
+<button class="event-button" onclick="showEventDetails(4)">
+    View Details →
+</button>
+
+                </div>
+
+
+                <!-- EVENT 4 -->
+
+                <div class="event-card"
+                    data-category="department">
+
+                    <div class="event-top">
+
+                        <span class="event-type">
+                            🎓 DEPARTMENT
+                        </span>
+
+                        <span class="event-date">
+                            25 SEP
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        CSS Department Tech Meet
+                    </h3>
+
+                    <p>
+                        Connect with students, faculty and explore
+                        upcoming technical opportunities.
+                    </p>
+
+                    <div class="event-info">
+
+                        <span>📍 Block A</span>
+
+                        <span>⏰ 12:00 PM</span>
+
+                    </div>
+
+                    <button class="event-button" onclick="showEventDetails(4)">
+    View Details →
+</button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- DEADLINES -->
+
+        <section class="deadline-section">
+
+            <div class="deadline-card">
+
+                <span class="deadline-icon">
+                    ⏳
+                </span>
+
+                <div>
+
+                    <h3>
+                        Registration Deadline
+                    </h3>
+
+                    <p>
+                        Campus Innovation Hackathon
+                        registration closes soon.
+                    </p>
+
+                </div>
+
+                <strong>
+                    16 SEP
+                </strong>
+
+            </div>
+
+        </section>
+
+
+    </main>
+<!-- ================= EVENT DETAILS POPUP ================= -->
+
+<div id="eventModal" class="event-modal">
+
+    <div class="event-modal-content">
+
+        <button id="closeModal" class="close-modal">
+            ✕
+        </button>
+
+        <span id="modalType" class="modal-type">
+            EVENT
+        </span>
+
+        <h2 id="modalTitle">
+            Event Title
+        </h2>
+
+        <p id="modalDescription">
+            Event description
+        </p>
+
+        <div class="modal-info">
+
+            <p id="modalDate">📅 Date</p>
+
+            <p id="modalTime">⏰ Time</p>
+
+            <p id="modalVenue">📍 Venue</p>
+
+            <p id="modalOrganizer">👤 Organizer</p>
+
+        </div>
+
+        <button class="register-event-button">
+            🚀 Register for Event
+        </button>
+
+    </div>
+
+</div>
+
+    <script src="../JS/events.js"></script>
+
+</body>
+
+</html>

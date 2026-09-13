@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusQuest - Quests</title>
+
+    <link rel="stylesheet"
+          href="../CSS/quests.css">
+
+</head>
+
+
+<body>
+
+    <div class="quests-container">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="quests-header">
+
+            <button
+                id="backButton"
+                class="back-button">
+
+                ← Back to Profile
+
+            </button>
+
+
+            <div class="title-section">
+
+                <div class="quest-icon">
+                    🗺️
+                </div>
+
+                <div>
+
+                    <h1>Campus Quests</h1>
+
+                    <p>
+                        Complete quests, earn XP and level up!
+                    </p>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             PLAYER XP
+        ====================================== -->
+
+        <section class="player-card">
+
+            <div class="player-info">
+
+                <div
+                    id="playerAvatar"
+                    class="player-avatar">
+
+                    🎮
+
+                </div>
+
+
+                <div>
+
+                    <h2 id="playerName">
+                        Campus Explorer
+                    </h2>
+
+                    <p id="playerLevel">
+                        Level 1
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="xp-section">
+
+                <div class="xp-top">
+
+                    <span>Current XP</span>
+
+                    <strong>
+                        <span id="playerXP">0</span> XP
+                    </strong>
+
+                </div>
+
+
+                <div class="xp-bar">
+
+                    <div
+                        id="xpProgress"
+                        class="xp-progress">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FILTER BUTTONS
+        ====================================== -->
+
+        <div class="filter-section">
+
+            <button
+                class="filter-button active"
+                data-filter="all">
+
+                🌟 All
+
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-filter="academic">
+
+                📚 Academic
+
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-filter="social">
+
+                🤝 Social
+
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-filter="campus">
+
+                🏫 Campus
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =====================================
+             QUEST LIST
+        ====================================== -->
+
+        <section>
+
+            <div
+                id="questList"
+                class="quest-list">
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             MESSAGE
+        ====================================== -->
+
+        <p
+            id="questMessage"
+            class="quest-message">
+        </p>
+
+
+
+        <!-- =====================================
+             FOOTER BUTTONS
+        ====================================== -->
+
+        <div class="bottom-buttons">
+
+            <button
+                id="profileButton"
+                class="secondary-button">
+
+                👤 My Profile
+
+            </button>
+
+
+            <button
+                id="settingsButton"
+                class="secondary-button">
+
+                ⚙️ Settings
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+
+    <script src="../JS/quests.js"></script>
+
+</body>
+
+</html>

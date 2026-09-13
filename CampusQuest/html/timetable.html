@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusX - Timetable</title>
+
+    <link rel="stylesheet" href="../CSS/timetable.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2 class="logo">CampusX</h2>
+
+        <nav>
+
+            <a href="dashboard.html">🏠 Dashboard</a>
+
+            <a href="academics.html">📚 Academics</a>
+
+            <a href="timetable.html" class="active">📅 Timetable</a>
+
+            <a href="quests.html">🗺️ Quests</a>
+
+            <a href="events.html">🎯 Events</a>
+
+            <a href="companies.html">🏢 Companies</a>
+
+            <a href="lost-found.html">🔎 Lost & Found</a>
+
+            <a href="profile.html">👤 Profile</a>
+
+            <a href="settings.html">⚙️ Settings</a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="top-bar">
+
+            <div>
+                <h1>📅 My Timetable</h1>
+
+                <p>
+                    Your weekly class schedule
+                </p>
+            </div>
+
+            <div class="student-info">
+
+                <span id="studentName">Student</span>
+
+                <div class="profile-circle" id="profileCircle">
+                    S
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="intro-card">
+
+            <div>
+                <h2>Weekly Schedule</h2>
+
+                <p>
+                    Stay organized and never miss a class.
+                </p>
+            </div>
+
+            <div class="branch-info">
+
+                <span id="studentBranch">
+                    Branch
+                </span>
+
+                <span id="studentYear">
+                    Year
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- TODAY -->
+
+        <section class="today-card">
+
+            <div class="today-heading">
+
+                <div>
+                    <h2>📌 Today's Classes</h2>
+
+                    <p id="todayDate">
+                        Loading date...
+                    </p>
+                </div>
+
+                <span id="todayDay">
+                    Today
+                </span>
+
+            </div>
+
+
+            <div class="today-classes">
+
+                <div class="class-box">
+
+                    <span class="class-time">
+                        09:00 AM
+                    </span>
+
+                    <div>
+                        <h3>Data Structures</h3>
+                        <p>Room 204 • Prof. Sharma</p>
+                    </div>
+
+                </div>
+
+
+                <div class="class-box">
+
+                    <span class="class-time">
+                        11:00 AM
+                    </span>
+
+                    <div>
+                        <h3>Database Management</h3>
+                        <p>Lab 3 • Prof. Singh</p>
+                    </div>
+
+                </div>
+
+
+                <div class="class-box">
+
+                    <span class="class-time">
+                        02:00 PM
+                    </span>
+
+                    <div>
+                        <h3>Web Development</h3>
+                        <p>Room 105 • Prof. Kumar</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WEEKLY TIMETABLE -->
+
+        <section class="timetable-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>🗓️ Weekly Timetable</h2>
+
+                    <p>
+                        Your complete weekly class schedule
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="timetable-container">
+
+                <!-- MONDAY -->
+
+                <div class="day-card">
+
+                    <div class="day-header">
+                        <h3>Monday</h3>
+                        <span>MON</span>
+                    </div>
+
+                    <div class="schedule">
+
+                        <div class="schedule-item">
+                            <span>09:00</span>
+                            <div>
+                                <strong>Data Structures</strong>
+                                <p>Room 204</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <span>11:00</span>
+                            <div>
+                                <strong>DBMS</strong>
+                                <p>Lab 3</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <span>02:00</span>
+                            <div>
+                                <strong>Web Development</strong>
+                                <p>Room 105</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TUESDAY -->
+
+                <div class="day-card">
+
+                    <div class="day-header">
+                        <h3>Tuesday</h3>
+                        <span>TUE</span>
+                    </div>
+
+                    <div class="schedule">
+
+                        <div class="schedule-item">
+                            <span>09:00</span>
+                            <div>
+                                <strong>Operating Systems</strong>
+                                <p>Room 201</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <span>11:00</span>
+                            <div>
+                                <strong>Java Programming</strong>
+                                <p>Lab 2</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <span>02:00</span>
+                            <div>
+                                <strong>Mathematics</strong>
+                                <p>Room 108</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WEDNESDAY -->
+
+                <div class="day-card">
+
+                    <div class="day-header">
+                        <h3>Wednesday</h3>
+                        <span>WED</span>
+                    </div>
+
+                    <div class="schedule">
+
+                        <div class="schedule-item">
+                            <span>09:00</span>
+                            <div>
+                                <strong>DBMS</strong>
+                                <p>Room 203</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <span>11:00</span>
+                            <div>
+                                <strong>Data Structures</strong>
+                                <p>Lab 1</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <span>02:00</span>
+                            <div>
+                                <strong>Web Development</strong>
+                                <p>Room 105</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- THURSDAY -->
+
+                <div class="day-card">
+
+                    <div class="day-header">
+                        <h3>Thursday</h3>
+                        <span>THU</span>
+                    </div>
+
+                    <div class="schedule">
+
+                        <div class="schedule-item">
+                            <span>09:00</span>
+                            <div>
+                                <strong>Java Programming</strong>
+                                <p>Room 202</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <span>11:00</span>
+                            <div>
+                                <strong>Operating Systems</strong>
+                                <p>Lab 4</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <span>02:00</span>
+                            <div>
+                                <strong>Computer Networks</strong>
+                                <p>Room 109</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FRIDAY -->
+
+                <div class="day-card">
+
+                    <div class="day-header">
+                        <h3>Friday</h3>
+                        <span>FRI</span>
+                    </div>
+
+                    <div class="schedule">
+
+                        <div class="schedule-item">
+                            <span>09:00</span>
+                            <div>
+                                <strong>Data Structures</strong>
+                                <p>Room 204</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <span>11:00</span>
+                            <div>
+                                <strong>Computer Networks</strong>
+                                <p>Room 109</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <span>02:00</span>
+                            <div>
+                                <strong>Project Work</strong>
+                                <p>Innovation Lab</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SATURDAY -->
+
+                <div class="day-card">
+
+                    <div class="day-header">
+                        <h3>Saturday</h3>
+                        <span>SAT</span>
+                    </div>
+
+                    <div class="schedule">
+
+                        <div class="schedule-item">
+                            <span>09:00</span>
+                            <div>
+                                <strong>Hackathon / Club</strong>
+                                <p>Innovation Hub</p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <span>11:00</span>
+                            <div>
+                                <strong>Skill Development</strong>
+                                <p>Seminar Hall</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK INFO -->
+
+        <section class="quick-info">
+
+            <div class="info-card">
+
+                <span>📚</span>
+
+                <div>
+                    <h3>Classes This Week</h3>
+                    <p>17 Classes</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>⏰</span>
+
+                <div>
+                    <h3>Next Class</h3>
+                    <p id="nextClass">Checking...</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <span>🏫</span>
+
+                <div>
+                    <h3>Labs</h3>
+                    <p>4 Practical Sessions</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../JS/timetable.js"></script>
+
+</body>
+
+</html>

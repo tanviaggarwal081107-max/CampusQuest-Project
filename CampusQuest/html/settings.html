@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusQuest - Settings</title>
+
+    <link rel="stylesheet"
+          href="../CSS/settings.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         SETTINGS PAGE
+    ====================================== -->
+
+    <div class="settings-container">
+
+
+        <!-- HEADER -->
+
+        <div class="settings-header">
+
+            <button
+                id="backButton"
+                class="back-button">
+
+                ← Back to Profile
+
+            </button>
+
+
+            <div class="title-section">
+
+                <div class="settings-icon">
+                    ⚙️
+                </div>
+
+                <div>
+
+                    <h1>Settings</h1>
+
+                    <p>
+                        Customize your CampusQuest experience
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             ACCOUNT SETTINGS
+        ====================================== -->
+
+        <section class="settings-card">
+
+            <h2>👤 Account</h2>
+
+            <p class="section-description">
+                Your CampusQuest account information
+            </p>
+
+
+            <div class="account-info">
+
+                <div class="info-row">
+
+                    <span class="info-label">
+                        Name
+                    </span>
+
+                    <span
+                        id="settingsName"
+                        class="info-value">
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span class="info-label">
+                        Email
+                    </span>
+
+                    <span
+                        id="settingsEmail"
+                        class="info-value">
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span class="info-label">
+                        Branch
+                    </span>
+
+                    <span
+                        id="settingsBranch"
+                        class="info-value">
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span class="info-label">
+                        Year
+                    </span>
+
+                    <span
+                        id="settingsYear"
+                        class="info-value">
+                        -
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             APPEARANCE
+        ====================================== -->
+
+        <section class="settings-card">
+
+            <h2>🎨 Appearance</h2>
+
+            <p class="section-description">
+                Customize how CampusQuest looks
+            </p>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <h3>Light Mode</h3>
+
+                    <p>
+                        Switch between dark and light theme
+                    </p>
+
+                </div>
+
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="themeToggle">
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             NOTIFICATIONS
+        ====================================== -->
+
+        <section class="settings-card">
+
+            <h2>🔔 Notifications</h2>
+
+            <p class="section-description">
+                Manage your CampusQuest notifications
+            </p>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <h3>Quest Notifications</h3>
+
+                    <p>
+                        Get notified about new quests
+                    </p>
+
+                </div>
+
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="notificationToggle"
+                        checked>
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <h3>Achievement Notifications</h3>
+
+                    <p>
+                        Get notified when you unlock achievements
+                    </p>
+
+                </div>
+
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="achievementToggle"
+                        checked>
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             GAME SETTINGS
+        ====================================== -->
+
+        <section class="settings-card">
+
+            <h2>🎮 Game Preferences</h2>
+
+            <p class="section-description">
+                Manage your gaming experience
+            </p>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <h3>Sound Effects</h3>
+
+                    <p>
+                        Enable sounds for quests and achievements
+                    </p>
+
+                </div>
+
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="soundToggle"
+                        checked>
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             SAVE BUTTON
+        ====================================== -->
+
+        <button
+            id="saveButton"
+            class="save-button">
+
+            💾 Save Settings
+
+        </button>
+
+
+        <p
+            id="settingsMessage"
+            class="settings-message">
+        </p>
+
+
+
+        <!-- =====================================
+             DANGER ZONE
+        ====================================== -->
+
+        <section class="settings-card danger-card">
+
+            <h2>⚠️ Danger Zone</h2>
+
+            <p class="section-description">
+                These actions cannot be easily undone.
+            </p>
+
+
+            <button
+                id="resetButton"
+                class="danger-button">
+
+                🔄 Reset Game Progress
+
+            </button>
+
+
+            <button
+                id="logoutButton"
+                class="logout-button">
+
+                🚪 Logout
+
+            </button>
+
+        </section>
+
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../JS/settings.js"></script>
+
+</body>
+
+</html>

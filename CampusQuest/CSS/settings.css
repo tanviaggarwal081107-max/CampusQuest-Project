@@ -1,0 +1,585 @@
+/* =====================================
+   GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #24204a,
+            #0d0b20 60%,
+            #070611
+        );
+
+    color: white;
+
+    padding: 40px 20px;
+
+    transition: 0.3s;
+
+}
+
+
+/* =====================================
+   MAIN CONTAINER
+===================================== */
+
+.settings-container {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.settings-header {
+
+    margin-bottom: 30px;
+
+}
+
+
+.back-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #b9b4ff;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    margin-bottom: 25px;
+
+}
+
+
+.back-button:hover {
+
+    color: white;
+
+}
+
+
+.title-section {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.settings-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 32px;
+
+    background: rgba(125, 92, 255, 0.2);
+
+    border: 1px solid rgba(145, 120, 255, 0.4);
+
+}
+
+
+.title-section h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.title-section p {
+
+    color: #aaa6c5;
+
+}
+
+
+/* =====================================
+   SETTINGS CARD
+===================================== */
+
+.settings-card {
+
+    background: rgba(25, 22, 50, 0.9);
+
+    border: 1px solid rgba(150, 135, 255, 0.2);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+}
+
+
+.settings-card h2 {
+
+    font-size: 21px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.section-description {
+
+    color: #9995b5;
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* =====================================
+   ACCOUNT INFORMATION
+===================================== */
+
+.account-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.info-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+}
+
+
+.info-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.info-label {
+
+    color: #9995b5;
+
+}
+
+
+.info-value {
+
+    color: white;
+
+    font-weight: bold;
+
+    text-align: right;
+
+}
+
+
+/* =====================================
+   SETTING ROW
+===================================== */
+
+.setting-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+}
+
+
+.setting-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.setting-row h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.setting-row p {
+
+    color: #9995b5;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================
+   TOGGLE SWITCH
+===================================== */
+
+.switch {
+
+    position: relative;
+
+    width: 52px;
+
+    height: 28px;
+
+    flex-shrink: 0;
+
+}
+
+
+.switch input {
+
+    display: none;
+
+}
+
+
+.slider {
+
+    position: absolute;
+
+    inset: 0;
+
+    cursor: pointer;
+
+    background: #403c5e;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+
+}
+
+
+.slider:before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+
+    height: 20px;
+
+    left: 4px;
+
+    top: 4px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+
+}
+
+
+.switch input:checked + .slider {
+
+    background: #7c5cff;
+
+}
+
+
+.switch input:checked + .slider:before {
+
+    transform: translateX(24px);
+
+}
+
+
+/* =====================================
+   SAVE BUTTON
+===================================== */
+
+.save-button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c5cff,
+            #9d7cff
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(124, 92, 255, 0.3);
+
+    transition: 0.2s;
+
+}
+
+
+.save-button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.settings-message {
+
+    text-align: center;
+
+    min-height: 25px;
+
+    margin: 12px 0 20px;
+
+    color: #00e0a0;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================
+   DANGER ZONE
+===================================== */
+
+.danger-card {
+
+    border-color:
+        rgba(255, 92, 122, 0.25);
+
+}
+
+
+.danger-button,
+.logout-button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+
+}
+
+
+.danger-button {
+
+    background: rgba(255, 92, 122, 0.1);
+
+    border: 1px solid rgba(255, 92, 122, 0.4);
+
+    color: #ff6b87;
+
+}
+
+
+.danger-button:hover {
+
+    background: rgba(255, 92, 122, 0.2);
+
+}
+
+
+.logout-button {
+
+    background: transparent;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    color: white;
+
+}
+
+
+.logout-button:hover {
+
+    background: rgba(255,255,255,0.08);
+
+}
+
+
+/* =====================================
+   LIGHT MODE
+===================================== */
+
+body.light-mode {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f1ff,
+            #e8e4ff
+        );
+
+    color: #24213d;
+
+}
+
+
+body.light-mode .settings-card {
+
+    background: white;
+
+    border-color: #ddd8f5;
+
+}
+
+
+body.light-mode .title-section p,
+body.light-mode .section-description,
+body.light-mode .setting-row p,
+body.light-mode .info-label {
+
+    color: #716d86;
+
+}
+
+
+body.light-mode .info-value {
+
+    color: #24213d;
+
+}
+
+
+body.light-mode .back-button {
+
+    color: #6752d6;
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .title-section h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .settings-icon {
+
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 26px;
+
+    }
+
+
+    .settings-card {
+
+        padding: 20px;
+
+    }
+
+
+    .info-row {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+
+    .info-value {
+
+        text-align: left;
+
+    }
+
+}
